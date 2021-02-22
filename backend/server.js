@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended:true}));
 
 app.post('/api/puppet', async(req,res) => {
     const browser = await puppeteer.launch({
-        headless:false,
+        headless:true,
         slowMo:200,
     });
     const page = await browser.newPage();
